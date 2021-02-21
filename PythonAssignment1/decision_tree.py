@@ -59,8 +59,6 @@ for index, element in enumerate(db):
                 Y.append(1)
             elif elementName == "No":
                 Y.append(2)
-print(X)
-print(Y)
 
 
 #transform the original training classes to numbers and add to the vector Y. For instance Yes = 1, No = 2, so Y = [1, 1, 2, 2, ...]
