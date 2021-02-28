@@ -12,6 +12,9 @@
 from sklearn.neighbors import KNeighborsClassifier
 import csv
 
+
+
+
 def convertDBFeaturesToNumber(dbName, xArray, yArray,indexToExclude):
     counterX = 0;
     for index, element in enumerate(dbName):
