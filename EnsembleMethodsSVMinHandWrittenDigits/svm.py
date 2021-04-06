@@ -3,7 +3,7 @@
 # FILENAME: svm.py
 # SPECIFICATION: Utilize svm techniques to predict pattern of handwritten digits based on a 32x32 bitsmap
 # FOR: CS 4200- Assignment #3
-# TIME SPENT: 2 hours
+# TIME SPENT: 3 hours
 #-----------------------------------------------------------*/
 
 #IMPORTANT NOTE: DO NOT USE ANY ADVANCED PYTHON LIBRARY TO COMPLETE THIS CODE SUCH AS numpy OR pandas. You have to work here only with standard vectors and arrays
@@ -21,6 +21,7 @@ degree = [1, 2, 3]
 kernel = ["linear", "poly", "rbf"]
 decision_function_shape = ["ovo", "ovr"]
 highestAccuracy = 0
+parameters = [0,0,0,0,0]
 
 #reading the data in a csv file
 with open('optdigits.tra', 'r') as trainingFile:
@@ -66,12 +67,18 @@ for i,cValue in enumerate(c) : #iterates over c
                 accuracy = accuracy/len(dbTest)
                 if accuracy >= highestAccuracy:
                     highestAccuracy = accuracy
-                    print("Highest SVM accuracy so far " + str(highestAccuracy) + " Parameters: c: " + str(cValue) +" degree: " + str(dValue) + "Kernel: " + str(kValue) + " Decision_function_shape: " + str(dsValue))
+                    print("Highest SVM accuracy so far " + str(highestAccuracy) + " Parameters: c: " + str(cValue) +" degree: " + str(dValue) + " Kernel: " + str(kValue) + " Decision_function_shape: " + str(dsValue))
+                    parameters[0] = highestAccuracy
+                    parameters[1] = str(cValue)
+                    parameters[2] = str(dValue)
+                    parameters[3] = str(kValue)
+                    parameters[4] = str(dsValue)
+
 
 #print the final, highest accuracy found together with the SVM hyperparameters
 #Example: "Highest SVM accuracy: 0.95, Parameters: a=10, degree=3, kernel= poly, decision_function_shape = 'ovr'"
 #--> add your Python code here
-
+print("Highest SVM accuracy:" + str(highestAccuracy) + " Parameters: c: " + parameters[1] +" degree: " + parameters[2] + " Kernel: " + parameters[3] + " Decision_function_shape: " + parameters[4])
 
 
 
