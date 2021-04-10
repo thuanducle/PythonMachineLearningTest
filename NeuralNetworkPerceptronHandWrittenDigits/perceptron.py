@@ -1,9 +1,9 @@
 #-------------------------------------------------------------------------
-# AUTHOR: your name
-# FILENAME: title of the source file
-# SPECIFICATION: description of the program
+# AUTHOR: Thuan Le
+# FILENAME: perceptron.py
+# SPECIFICATION: Use perceptron techinques with learning rate n
 # FOR: CS 4200- Assignment #4
-# TIME SPENT: how long it took you to complete the assignment
+# TIME SPENT: 1 hour
 #-----------------------------------------------------------*/
 
 #importing some Python libraries
